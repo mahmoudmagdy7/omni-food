@@ -1,0 +1,785 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints:
+#fdf2e9
+#fae5d3
+#eb984e
+
+- Shades: 
+#cf711f
+#45260a
+
+- Accents:
+- Greys
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  scrollbar-color: rgba(255, 150, 39, 0.876) rgba(46, 54, 69, 0.611) !important;
+  scrollbar-width: thin !important;
+  font-size: 62.5%;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: #333;
+  background: #eb984e;
+}
+
+::selection {
+  color: #333;
+  background: #eb984e;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #333;
+}
+.application-logo {
+  height: 2.2rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #fdf2e9;
+}
+.menu a:link,
+.menu a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-left: 20px;
+}
+.menu a:link,
+.menu a:visited:hover {
+  color: #e67e22;
+}
+.menu a:last-child {
+  display: inline-block;
+  background-color: #e67e22;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+  color: #fff;
+  /* max-width: 300px; */
+}
+.menu a:last-child:hover {
+  background-color: #c56c1d;
+  color: #fff;
+}
+.btn {
+  background-color: #e67e22;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.5s;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #c56c1d;
+  color: #fff;
+}
+
+header {
+  background-color: #fdf2e9;
+  padding: 3.2rem 0 9.4rem 0;
+}
+
+.header {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  padding: 0 3.2rem;
+  align-items: center;
+}
+h1 {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+.header p {
+  margin: 0 0 4rem 0;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 50rem;
+}
+.header img {
+  width: 100%;
+}
+
+header .btn {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  margin-bottom: 3.2rem;
+}
+header .btn-secondry {
+  background-color: #fff;
+  margin-left: 2rem;
+  color: #555;
+}
+header .btn-secondry:hover {
+  background-color: #fdf2e9;
+  color: #555;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  margin-top: 5.2rem;
+}
+.delivered-meals .pictures {
+  display: flex;
+}
+.delivered-meals .pictures img {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin: 0 -0.75rem;
+  border-radius: 50px;
+  border: 3px solid #fff;
+}
+.delivered-meals p {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+.delivered-meals p > span {
+  color: #d3721d;
+}
+.brands {
+  width: 1200px;
+  margin: 5rem auto;
+  text-align: center;
+}
+.brands h2 {
+  margin: 2.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.brands .logos {
+  display: flex;
+  gap: 4.8rem;
+  justify-content: center;
+}
+.brands .logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+.how-it-works {
+  padding: 6rem 0;
+}
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.subheading {
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #e67e22;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.06;
+  font-weight: 700;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  margin: 3.6rem auto;
+}
+
+.step-number {
+  font-size: 9.6rem;
+  font-weight: 700;
+  color: #ddd;
+}
+.heading-tertiary {
+  padding: 2.4rem 0;
+  font-size: 3.2rem;
+  line-height: 1.06;
+}
+
+.step-description {
+  line-height: 1.6;
+  font-size: 1.8rem;
+  color: #666;
+}
+.step-img-box {
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+.step-img-box::after,
+.step-img-box::before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-img-box::after {
+  width: 60%;
+  height: 60%;
+  background-color: #ffc595;
+  z-index: -1;
+  display: block;
+}
+.step-img-box::before {
+  width: 80%;
+  height: 80%;
+  background-color: #ffe5d0;
+  z-index: -2;
+  display: block;
+}
+.step-img {
+  text-align: center;
+  width: 45%;
+}
+.meals {
+  padding: 9rem 0;
+}
+.meals-title {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 4.8rem;
+  padding-top: 3.2rem;
+  padding-bottom: 4rem;
+  color: #333;
+}
+.meal-content {
+  padding: 3.8rem 6rem 4.8rem 4.8rem;
+}
+.recipe-card {
+  transition: transform 0.7s;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 3rem #eee;
+  height: 100%;
+  /* padding-bottom: 1rem; */
+}
+.recipe-card:hover {
+  transform: translateY(-1.5rem);
+}
+.recipe-card img {
+  max-width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+.recipe-card .cat {
+  display: inline-block;
+  background-color: #51cf66;
+  width: fit-content;
+  padding: 0.3rem 0.6rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+.recipe-card .cat-2 {
+  background-color: #f9d534;
+}
+.recipe-card .cat-3 {
+  background-color: #6edb0e;
+}
+.recipe-card p {
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin: 1rem 0 3.2rem 0;
+}
+
+.recipe-card li {
+  list-style: none;
+  font-size: 1.8rem;
+  color: #555;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+.recipe-card ul ion-icon {
+  color: #e67e22;
+  margin-right: 1.6rem;
+}
+
+.all-recipe {
+  text-align: center;
+}
+.all-recipe a:link,
+.all-recipe a:visited {
+  font-size: 1.8rem;
+  color: #c56c1d;
+}
+
+.dite-list h3 {
+  font-size: 3rem;
+}
+
+.dite-list .list {
+  display: flex;
+  color: #555;
+  flex-direction: column;
+  list-style: none;
+  padding-top: 4rem;
+  text-align: left;
+  gap: 1.8rem;
+  width: 100%;
+}
+.dite-list .list-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  width: 100%;
+}
+.dite-list .list-icon {
+  color: #e67e22;
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  background-color: #fdf2e9;
+  align-items: center;
+}
+.testimonial-container {
+  padding-top: 13rem;
+  text-align: center;
+}
+.testimonial-container .subheading {
+  width: 80%;
+  text-align: left;
+}
+
+.testimonials .left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 9.6rem 9.6rem 9.6rem 9.6rem;
+  column-gap: 8rem;
+  row-gap: 4rem;
+  text-align: left;
+  color: #555;
+}
+.testimonials .left img {
+  border-radius: 50px;
+  width: 6.4rem;
+}
+.testimonials .left p {
+  overflow: hidden;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin: 1.6rem 0 1.6rem 0;
+}
+
+.testimonials .right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+.testimonials .right figure {
+  overflow: hidden;
+}
+.testimonials .right img {
+  max-width: 100%;
+  transition: 1s;
+}
+.testimonials .right img:hover {
+  transform: scale(120%);
+}
+.sign {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.pricing-container {
+  background-color: #fff;
+  padding: 9.6rem 3.2rem;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 9.6rem 0;
+  gap: 6.2rem;
+}
+
+.pricing-cards .card {
+  text-align: center;
+  padding: 4.8rem 3.6 0rem 3.6rem;
+  height: 100%;
+  max-width: 70%;
+  border-radius: 10px;
+}
+.testing {
+  display: flex;
+  justify-content: end;
+}
+.pricing-cards .card-1 {
+  width: 100%;
+  border: solid 2px #fdf2e9;
+  padding: 4.8rem 2rem;
+}
+.pricing-cards .card h2 {
+  color: #f98a29;
+  margin-bottom: 3.2rem;
+  font-size: 1.8rem;
+}
+
+.pricing-cards .price {
+  font-weight: 700;
+  font-size: 5.6rem;
+  display: flex;
+  justify-content: center;
+}
+.pricing-cards .price sub {
+  font-size: 3.2rem;
+  align-self: flex-end;
+}
+.pricing-cards p {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: #888;
+}
+.pricing-cards .list {
+  font-size: 1.8rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  text-align: star;
+}
+.pricing-cards .list-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.pricing-cards .list-item ion-icon {
+  font-size: 3rem;
+  color: #e67e22;
+}
+.pricing-cards .btn {
+  display: inline-block;
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+}
+.pricing-cards .card-2 {
+  background-color: #fdf2e9;
+  padding: 4.8rem 3.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-cards .card-2::before {
+  content: "best value";
+  text-transform: uppercase;
+  position: absolute;
+  top: 3.2rem;
+  right: -5rem;
+  transform: rotate(45deg);
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: rgb(255, 215, 17);
+  padding: 0.8rem 0;
+  width: 20rem;
+}
+.last-paragraph {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #555;
+  margin-top: -3.2rem;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6.4rem;
+  padding-bottom: 6rem;
+}
+.features-container .feature {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #555;
+}
+.features-container .feature .feature-icon {
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #d3721d;
+  background-color: rgb(255, 244, 227);
+  border-radius: 50px;
+  padding: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+.features-container .feature .feature-title {
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contact-us-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 12rem auto;
+  max-width: 114rem;
+  border-radius: 1.4rem;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  box-shadow: 0 2rem 5rem 0.5rem rgba(68, 68, 68, 0.098);
+}
+.contact-us-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 1.4rem 1.4rem 0;
+  filter: opacity(60%);
+  background-size: cover;
+}
+.contact-us-container .details {
+  padding: 6.2rem;
+}
+.contact-us-container .contact-heading {
+  color: #45260a;
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+.contact-us-container .discreption {
+  color: #45260a;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin: 5rem 0;
+}
+
+.contact-us-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 3rem;
+}
+.contact-us-container form div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+}
+.contact-us-container form label {
+  color: #45260a;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.contact-us-container form input,
+select {
+  color: #999;
+  font-size: 1.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 8px;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+.contact-us-container select {
+  color: rgb(56, 43, 25);
+}
+.contact-us-container select:focus {
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+.contact-us-container form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+.contact-us-container form .btn {
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1.3rem;
+  background-color: rgb(56, 43, 25);
+  border-radius: 8px;
+  transition: box-shadow 0.5s, background-color 0.5s;
+  align-self: end;
+  background-color: #45260a;
+  color: #fdf2e9;
+}
+.contact-us-container form .btn:hover {
+  background-color: rgb(237, 237, 237);
+  color: #444;
+}
+.contact-us-container form .btn:active {
+  background-color: rgb(237, 237, 237);
+  color: #444;
+  box-shadow: 0 0 0 1rem rgba(254, 229, 182, 0.511);
+  transition: box-shadow 0.5s;
+}
+footer {
+  padding: 12rem;
+  border-top: solid 1px rgb(234, 234, 234);
+}
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  gap: 6.9rem;
+}
+.grid-footer .logo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3.8rem;
+}
+.grid-footer .footer-logo img {
+  height: 2.2rem;
+}
+.grid-footer .social-links {
+  display: flex;
+  list-style: none;
+  font-size: 2.4rem;
+}
+.grid-footer .social-links ion-icon {
+  filter: grayscale(1);
+  opacity: 70%;
+  margin-right: 2rem;
+  transition: opacity 0.5s;
+}
+.grid-footer .social-links ion-icon:hover {
+  opacity: 100%;
+}
+.grid-footer .copyright {
+  font-size: 1.4rem;
+  color: #777;
+  margin-top: auto;
+  line-height: 1.6;
+}
+.grid-footer .address-col {
+  display: flex;
+  flex-direction: column;
+}
+.grid-footer .contacts {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-style: normal;
+  margin-bottom: 3.2rem;
+  color: #555;
+}
+.grid-footer .contacts .address {
+  margin-bottom: 3.2rem;
+}
+.grid-footer .contacts {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-style: normal;
+  margin-bottom: 3.2rem;
+  color: #666;
+}
+.grid-footer .contacts a {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-style: normal;
+  color: #666;
+  text-decoration: none;
+}
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  color: #555;
+}
+.grid-footer .nav-col {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.grid-footer .nav-col .footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.grid-footer .nav-col .footer-nav .footer-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
