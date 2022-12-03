@@ -152,7 +152,7 @@ header {
   align-items: center;
 }
 h1 {
-  font-size: 5.2rem;
+  font-size: 4.4rem;
   line-height: 1.05;
   margin-bottom: 3.2rem;
 }
@@ -161,7 +161,6 @@ h1 {
   font-size: 2rem;
   line-height: 1.6;
   color: #555;
-  max-width: 50rem;
 }
 .header img {
   width: 100%;
@@ -254,7 +253,7 @@ header .btn-secondry:hover {
   color: #e67e22;
 }
 .heading-secondary {
-  font-size: 4.4rem;
+  font-size: 3.6rem;
   line-height: 1.06;
   font-weight: 700;
 }
@@ -275,7 +274,7 @@ header .btn-secondry:hover {
 }
 .heading-tertiary {
   padding: 2.4rem 0;
-  font-size: 3.2rem;
+  font-size: 3rem;
   line-height: 1.06;
 }
 
@@ -697,7 +696,7 @@ select {
   transition: box-shadow 0.5s;
 }
 footer {
-  padding: 12rem;
+  padding: 12rem 0;
   border-top: solid 1px rgb(234, 234, 234);
 }
 .grid-footer {
