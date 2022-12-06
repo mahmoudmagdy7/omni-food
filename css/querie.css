@@ -76,7 +76,6 @@
     backdrop-filter: blur(8px);
     transform: translateX(0);
     height: 100vh;
-    transition: 3s;
   }
   .header-nav .menu a {
     justify-content: center;
