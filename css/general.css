@@ -154,7 +154,10 @@ body {
   background-color: #c56c1d;
   color: #fff;
 }
-
+.nav-fix {
+  position: relative;
+  overflow: hidden;
+}
 header {
   background-color: #fdf2e9;
   padding: 3.2rem 0 9.4rem 0;
