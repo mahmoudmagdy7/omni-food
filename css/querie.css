@@ -100,6 +100,67 @@
   .grid-footer {
     gap: 3.2rem;
   }
+  .brands .logos {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .features-container {
+    max-width: 64rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-fixing {
+    height: 80rem;
+  }
+  .contact-us-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 12rem auto;
+    gap: 5rem;
+    max-width: 60rem;
+    align-self: center;
+    height: 71rem;
+    /* background-image: url(../img/eating.jpg);
+    background-size: cover; */
+  }
+  /* .contact-us-container .details {
+    height: 70rem;
+    background-color: red;
+  } */
+  .contact-us-container .form {
+    margin-top: 5rem;
+    gap: 3.2rem;
+  }
+  .contact-us-container .discreption {
+    margin-top: 3.2rem;
+  }
+  .contact-us-container img {
+    grid-column: 2 / 1;
+    height: 80%;
+    border-radius: 0 0 1.4rem 1.4rem;
+    filter: opacity(100%);
+
+    display: none;
+  }
+
+  .grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 3.2rem;
+    gap: 3.2rem;
+    row-gap: 5rem;
+  }
+  .logo-col {
+    grid-column: 1 / 3;
+  }
+  .grid-footer .address-col {
+    grid-column: 3 /6;
+  }
+  .grid-footer .nav-col {
+    grid-column: span 2;
+  }
 }
 
 /***************************************/
@@ -108,16 +169,15 @@
 
 @media (max-width: 27em) {
   html {
-    font-size: 40%;
+    /* font-size: 40%; */
   }
   body {
     position: relative;
-    color: red;
   }
   .header-nav .menu {
     display: none;
   }
-  .header-nav:hover > .menu {
+  .header-nav:hover .menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,6 +200,44 @@
     right: 0;
     top: 0; */
     /* transform: translate(-50%, 50%); */
+  }
+  .header-nav .open-menu {
+    display: block;
+  }
+  .header .btn-secondry {
+    margin-left: 0;
+  }
+
+  .header img {
+    width: 100%;
+  }
+  .header {
+    padding-top: 0;
+  }
+  .delivered-meals {
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-top: 1rem;
+  }
+  .brands .logos {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .brands .logos img {
+    height: 1.8rem;
+  }
+  .grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6.9rem;
+  }
+  .logo-col {
+    grid-column: 1 / 3;
+  }
+  .grid-footer .address-col {
+    grid-column: 4 /6;
   }
 }
 
