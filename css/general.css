@@ -103,8 +103,11 @@ body {
   background-color: rgba(1, 2, 1, 0);
   border: none;
   cursor: pointer;
+  font-size: 4.8rem;
+  line-height: 0;
   display: none;
 }
+
 .menu a:link,
 .menu a:visited {
   text-decoration: none;
@@ -539,7 +542,7 @@ header .btn-secondry:hover {
   flex-direction: column;
   gap: 2rem;
   list-style: none;
-  text-align: star;
+  text-align: start;
 }
 .pricing-cards .list-item {
   display: flex;
