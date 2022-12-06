@@ -54,15 +54,13 @@
   .header-nav {
     transition: 3s;
   } */
-  .header-nav .open-menu {
+  /* .header-nav .open-menu {
     display: inline-block;
-  }
+  } */
   .header-nav .menu {
     display: none;
     transform: translateX(100%);
-    transition: 3s;
-  }
-  .header-nav:hover .menu {
+    transition: 1s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,8 +72,11 @@
     left: 0;
     width: 100%;
     backdrop-filter: blur(8px);
-    transform: translateX(0);
     height: 100vh;
+    z-index: 20;
+  }
+  .header-nav .opend {
+    transform: translateX(0);
   }
   .header-nav .menu a {
     justify-content: center;
