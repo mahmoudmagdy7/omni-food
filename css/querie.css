@@ -48,12 +48,12 @@
   body {
     position: relative;
   }
-  .collaps .menu {
+  /* .collaps .menu {
     transition: 3s;
   }
   .header-nav {
     transition: 3s;
-  }
+  } */
   .header-nav .open-menu {
     display: inline-block;
   }
@@ -226,7 +226,13 @@
   html {
     font-size: 40%;
   }
-
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons .btn {
+    align-self: center;
+  }
   .application-logo {
     height: 3rem;
   }
