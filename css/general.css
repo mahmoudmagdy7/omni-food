@@ -69,6 +69,7 @@ html {
   scrollbar-color: rgba(255, 150, 39, 0.876) rgba(46, 54, 69, 0.611) !important;
   scrollbar-width: thin !important;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 ::-moz-selection {
   /* Code for Firefox */
@@ -107,7 +108,7 @@ body {
   font-size: 4.8rem;
   line-height: 0;
   position: relative;
-  /* display: none; */
+  display: none;
   z-index: 1111;
 }
 

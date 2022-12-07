@@ -37,6 +37,7 @@
     max-width: 105rem;
   }
 }
+
 /***************************************/
 /* BELOW 920px ( taplets)   */
 /***************************************/
@@ -47,6 +48,9 @@
   }
   body {
     position: relative;
+  }
+  .header-nav button {
+    display: inline-block;
   }
   /* .collaps .menu {
     transition: 3s;
